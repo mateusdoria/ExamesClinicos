@@ -8,7 +8,7 @@ public abstract class Exames implements Serializable {
     private   String nome_do_medico;
     private   String convenio;
     private   String nome_do_paciente;
-    protected String especie;
+    public String exame;
 
     public Exames(String nome_do_medico, String convenio, String nome_do_paciente) {
         this.nome_do_medico = nome_do_medico;
@@ -24,5 +24,4 @@ public abstract class Exames implements Serializable {
         retorno += "Barulho: "  + soar()        + "\n";
         return retorno;
     }
-    public abstract String soar();
 }
