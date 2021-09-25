@@ -20,8 +20,6 @@ public abstract class Exames implements Serializable {
         retorno += "Nome do Médico: "     + this.nome_do_medico     + "\n";
         retorno += "Convenio: "    + this.convenio    + " \n";
         retorno += "Nome do Paciente: "     + this.nome_do_paciente     + "\n";
-        retorno += "Especie: "  + this.especie  + "\n";
-        retorno += "Barulho: "  + soar()        + "\n";
         return retorno;
     }
 }
