@@ -79,7 +79,7 @@ public class ExamesClinicos {
 
         try {
             inputStream = new ObjectInputStream
-                    (new FileInputStream("c:\\temp\\examesClinicos.dados"));
+                    (new FileInputStream("C:\\temp\\examesClinicos.dados"));
             Object obj = null;
             while ((obj = inputStream.readObject()) != null) {
                 if (obj instanceof Exames) {
@@ -91,7 +91,7 @@ public class ExamesClinicos {
         } catch (ClassNotFoundException ex) {
             ex.printStackTrace();
         } catch (FileNotFoundException ex) {
-            JOptionPane.showMessageDialog(null,"Arquivo com exames N�O existe!");
+            JOptionPane.showMessageDialog(null,"Arquivo com exames NAO existe!");
             ex.printStackTrace();
         } catch (IOException ex) {
             ex.printStackTrace();
@@ -130,6 +130,7 @@ public class ExamesClinicos {
         int    opc1, opc2;
 
         do {
+
             menu = "Controle Clinica\n" +
                     "Opções:\n" +
                     "1. Entrar Exames\n" +
@@ -150,6 +151,7 @@ public class ExamesClinicos {
 
                     entrada = JOptionPane.showInputDialog (menu + "\n\n");
                     opc2 = this.retornaInteiro(entrada);
+
 
                     switch (opc2){
                         case 1: exame.add((Exames)leRadiografia());
